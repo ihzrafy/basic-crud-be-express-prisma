@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/main_db"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL_MAIN_DB")
+}
+
+model mst_todo_category {
+  id         Int       @id @default(autoincrement()) // カラム名
+  category   String    @unique
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+  deleted_at DateTime?
+  todos    tr_todo[]
+}
+
+model tr_todo {
+  id          Int       @id @default(autoincrement())
+  title       String
+  category_id Int
+  description String?
+  progress    Float     @default(0)
+  created_by  String
+  created_at  DateTime  @default(now())
+  updated_at  DateTime  @updatedAt
+  deleted_at  DateTime?
+  category mst_todo_category @relation(fields: [category_id], references: [id])
+}

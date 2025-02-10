@@ -28,17 +28,19 @@ Content-Type: application/json
 DELETE http://localhost:4912/users/1
 
 ###
-GET http://localhost:4912/todos/1
+GET http://localhost:4912/todos/7
 
 ###
 POST http://localhost:4912/todos
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG5fZG9lIiwiZW1haWwiOiJqb2huLmRvZUBleGFtcGxlLmNvbSIsImlhdCI6MTczODMwNTI3MCwiZXhwIjoxNzM4MzkxNjcwfQ.Ch4w8PTQS_TXb0pIhGrXhH1g5Ok0pP8-pKxnh9J-YX4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG5fZG9lIiwiZW1haWwiOiJqb2huLmRvZUBleGFtcGxlLmNvbSIsImlhdCI6MTczODgwNzcxOCwiZXhwIjoxNzM4ODk0MTE4fQ.tXoDEXBniRomEOSKjMqjJ2wRF7Au6P56lDPJLpyIjQY
 
 
 {
+    "title": "Test Todo",
     "category_id": 1,
-    "title": "Test Todo"
+    "description": "Sample Description",
+    "progress": 50    
 }
 
 

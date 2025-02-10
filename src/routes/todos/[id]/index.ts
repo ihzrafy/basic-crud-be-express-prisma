@@ -128,7 +128,7 @@ export const del = [
 
       const deletedTodo = await main_db.tr_todo.update({
         where: { id },
-        data: { deleted_at: new Date() },
+        data: { deleted_at: new Date(), isDeleted: true },
       });
 
       return res.status(200).json({

@@ -11,7 +11,7 @@ export const printTimestamp = (request: CustomRequest, response: Response, nextF
 
     if(!token){
         return response.status(401).json({
-            message: 'unauthorized !!!!',
+            message: 'Unauthorized !!!!',
         });
     }
 

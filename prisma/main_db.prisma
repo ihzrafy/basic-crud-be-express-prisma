@@ -27,5 +27,6 @@ model tr_todo {
   created_at  DateTime  @default(now())
   updated_at  DateTime  @updatedAt
   deleted_at  DateTime?
+  isDeleted   Boolean  @default(false) 
   category mst_todo_category @relation(fields: [category_id], references: [id])
 }
